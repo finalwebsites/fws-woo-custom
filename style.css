@@ -1,0 +1,26 @@
+/* Some style for the WooCommerce template files */
+
+.coupon-custom {
+	float: right;
+    width: 48%;
+    padding:0 0 20px;
+}
+.theme-storefront .coupon-custom { width:52.9411764706%; }
+
+.coupon-custom:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.coupon-custom > input[type=text] { width:100%;margin-bottom:10px; }
+.coupon-custom > button { width:100%; }
+.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals {
+	clear:both;
+}
+
+@media only screen and (max-width: 768px) {
+	.coupon-custom {
+		float:none;
+		width:100%;
+	}
+}
