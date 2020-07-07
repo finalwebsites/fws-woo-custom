@@ -44,7 +44,7 @@ class Custom_Woo_Plugin_Settings {
   		array_push( $links, $settings_link );
   		return $links;
 	}
-	
+
 	private function settings_fields() {
 		$settings['standard'] = array(
 			'title'					=> __( 'Kies je opties...', 'fwstextdomain' ),
@@ -95,7 +95,7 @@ class Custom_Woo_Plugin_Settings {
 				array(
 					'id' 			=> 'move_coupon_cart_page',
 					'label'			=> __( 'Kortingscode verplaatsen', 'fwstextdomain' ),
-					'description'	=> __( 'Verplaats het velde voor de kortingscode op winkelmand pagina (boven de subtotalen).', 'fwstextdomain' ),
+					'description'	=> __( 'Verplaats het veld voor de kortingscode op de winkelmand pagina (boven de subtotalen).', 'fwstextdomain' ),
 					'type'			=> 'checkbox',
 					'default'		=> ''
 				),
@@ -109,14 +109,14 @@ class Custom_Woo_Plugin_Settings {
 				array(
 					'id' 			=> 'hide_sku',
 					'label'			=> __( 'SKU verbergen', 'fwstextdomain' ),
-					'description'	=> __( 'De artikelnummer (SKU) verbergen op de productdetailpagina.', 'fwstextdomain' ),
+					'description'	=> __( 'Het artikelnummer (SKU) verbergen op de productdetailpagina.', 'fwstextdomain' ),
 					'type'			=> 'checkbox',
 					'default'		=> ''
 				),
 				array(
 					'id' 			=> 'alt_stock_messages',
 					'label'			=> __( 'Wijzig voorraadmeldingen', 'fwstextdomain' ),
-					'description'	=> __( 'Toon en gebruik alternatieve benamingen voor de voorraad informatie op de productpagina\'s.', 'fwstextdomain' ),
+					'description'	=> __( 'Toon en gebruik alternatieve benamingen voor de voorraadinformatie op de productpagina\'s.', 'fwstextdomain' ),
 					'type'			=> 'checkbox',
 					'default'		=> ''
 				),
@@ -131,7 +131,7 @@ class Custom_Woo_Plugin_Settings {
 				array(
 					'id' 			=> 'remove_breadcrumbs',
 					'label'			=> __( 'Verwijder broodkruimelpad', 'fwstextdomain' ),
-					'description'	=> __( 'De broodkruimel pad van WooCommerce verwijderen. Wil je deze tonen? Gebruik dan de functie uit Yoast SEO.', 'fwstextdomain' ),
+					'description'	=> __( 'Het broodkruimelpad van WooCommerce verwijderen. Wil je deze tonen? Gebruik dan de functie uit Yoast SEO.', 'fwstextdomain' ),
 					'type'			=> 'checkbox',
 					'default'		=> ''
 				)
@@ -194,7 +194,7 @@ class Custom_Woo_Plugin_Settings {
 	public function settings_page() {
 		$html = '<div class="wrap" id="plugin_settings">' . "\n";
 			$html .= '<h2>' . __( 'Custom WooCommerce' , 'fwstextdomain' ) . '</h2>' . "\n";
-			$html .= '<p>'.__( 'Kies hieronder welke aanpassingen je wil toepassen. Controleer elke aanpassingen of deze het gewenste resultaat oplevert. Werkt een optie niet zoals gewenst, zet deze dan uit of overleg deze met je webbouwer.', 'fwstextdomain' ).'</p>' . "\n";
+			$html .= '<p>'.__( 'Kies hieronder welke aanpassingen je wil toepassen. Controleer elke aanpassing of deze het gewenste resultaat oplevert. Werkt een optie niet zoals gewenst, zet deze dan uit en overleg eerst met je webbouwer.', 'fwstextdomain' ).'</p>' . "\n";
 			$html .= '<form method="post" action="options.php">' . "\n";
 				/*$html .= '<ul id="settings-sections" class="subsubsub hide-if-no-js">' . "\n";
 					$html .= '<li><a class="tab all current" href="#all">' . __( 'All' , 'fwstextdomain' ) . '</a></li>' . "\n";
@@ -208,10 +208,10 @@ class Custom_Woo_Plugin_Settings {
 				do_settings_sections( 'fws_custom_woo_Settings' );
 				$html .= ob_get_clean();
 				$html .= '<p class="submit">' . "\n";
-					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Save Settings' , 'fwstextdomain' ) ) . '" />' . "\n";
+					$html .= '<input name="Submit" type="submit" class="button-primary" value="' . esc_attr( __( 'Instellingen opslaan' , 'fwstextdomain' ) ) . '" />' . "\n";
 				$html .= '</p>' . "\n";
 			$html .= '</form>' . "\n";
-			$html .= '<p>'.__( 'Afhankelijk van het thema dat je gebruikt zullen niet alle aanpassingen even "mooi" uitzien. Dit kan jij of je webbouwer verhelpen met een beetje CSS style code.<br>Wil je de teksten van de plugin aanpassen, dan kan dat eenvoudig met plugins zoals <em>Say What</em> of <em>Loco Translate</em>.', 'fwstextdomain' ).'</p>' . "\n";
+			$html .= '<p>'.__( 'Afhankelijk van het thema dat je gebruikt, zullen niet alle aanpassingen even "mooi" uitzien. Dit kan jij of je webbouwer verhelpen met een beetje CSS code.<br>Wil je de teksten van de plugin aanpassen? Dat kan eenvoudig met plugins zoals <em>Say What</em> of <em>Loco Translate</em>.', 'fwstextdomain' ).'</p>' . "\n";
 		$html .= '</div>' . "\n";
 		echo $html;
 	}
