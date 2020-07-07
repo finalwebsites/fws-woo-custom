@@ -21,7 +21,7 @@ Een aantal standaard eigenschappen en functies in WooCommerce vinden wij (en vee
 * De artikelnummer (SKU) verbergen op de productdetailpagina.
 * Toon en gebruik alternatieve benamingen voor de voorraadinformatie op de productpagina's.
 * Toon een badge met de tekst "Nieuw" voor X dagen nadat een nieuw product is toegevoegd.
-* Het broodkruimelpad van WooCommerce verwijderen. 
+* Het broodkruimelpad van WooCommerce verwijderen.
 
 ## Installatie
 
@@ -30,4 +30,4 @@ De snellste installatie methode is:
 1. Upload en installeer de plugin via de built-in WordPress Plugin installer of...
 1. Extraheer het zip bestand van deze pagina en upload de gehele map naar het `/wp-content/plugins/` directory.
 1. Activeer de plugin via het 'Plugins' menu in je WordPress dashboard.
-1. Zet de verschillende opties aan via de Instellingen > Custom WooCommerce.
+1. Zet de verschillende opties aan via *Instellingen > Custom WooCommerce*.
